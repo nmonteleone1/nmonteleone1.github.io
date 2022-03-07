@@ -1,13 +1,6 @@
 import './style.css';
 import * as THREE from 'three';
-
-import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
 import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
-import { Object3D, Vector3 } from 'three';
-import { clamp } from 'three/src/math/MathUtils';
-//import { ModuleNode } from 'vite';
-
-
 
 class CharacterController {
   constructor(object) {
@@ -244,7 +237,7 @@ class LoadApp {
     plane.rotation.x = -Math.PI / 2;
     this.scene.add(plane);
 
-    const player = new Object3D;
+    const player = new THREE.Object3D;
 
     const loader = new GLTFLoader();
     loader.load('plane.glb', (gltf) => {
